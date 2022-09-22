@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine.js Course</title>
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <!-- x-data, x-text, x-html -->
@@ -21,10 +22,21 @@
     ></div> -->
 
     <!-- x-data with methods -->
-    <div x-data="{message: 'Click to change', change(){
+    <!-- <div x-data="{message: 'Click to change', change(){
         this.message = 'Changed message'
     }}">
         <span x-text="message" @click="change()"></span>
+    </div> -->
+
+    <!-- <div x-data="dropdown">
+        <button @click="toggle">Open/close</button>
+        <div x-show="open">
+            Content...
+        </div>
+    </div> -->
+
+    <div x-data @click="alert('something')">
+        Click Me
     </div>
 </body>
 </html>
