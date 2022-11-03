@@ -5,4 +5,9 @@ document.addEventListener('alpine:init', () => {
             this.open = !this.open
         }
     }));
+
+    Alpine.store('currentUser', {
+        username: 'TheCodeholic',
+        posts: ['Post 1', 'Post 2']
+    })
 });

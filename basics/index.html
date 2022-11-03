@@ -35,8 +35,10 @@
         </div>
     </div> -->
 
-    <div x-data @click="alert('something')">
+    <!-- <div x-data @click="alert('something')">
         Click Me
-    </div>
+    </div> -->
+
+    <div x-data x-text="$store.currentUser.username"></div>
 </body>
 </html>
