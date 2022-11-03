@@ -39,7 +39,7 @@
         Click Me
     </div> -->
 
-    <div x-data x-text="$store.currentUser.username"></div>
+    <!-- <div x-data x-text="$store.currentUser.username"></div>
 
     <div x-init="console.log('init')">
 
@@ -55,6 +55,18 @@
     x-init="todo = await ((await fetch('https://jsonplaceholder.typicode.com/todos/1')).json())"
     >
     <p x-text="todo.title"></p>
+    </div> -->
+
+    <!-- scoping -->
+    <div x-data ="{name: 'Zura',
+        age: 30,
+        gender: 'male'
+    }">
+        <div x-data="{name: 'john', age: 25}">
+            <div x-data="{name: 'Mary'}">
+                <p x-text="gender"></p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
