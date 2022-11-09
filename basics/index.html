@@ -58,7 +58,7 @@
     </div> -->
 
     <!-- scoping -->
-    <div x-data ="{name: 'Zura',
+    <!-- <div x-data ="{name: 'Zura',
         age: 30,
         gender: 'male'
     }">
@@ -66,6 +66,23 @@
             <div x-data="{name: 'Mary'}">
                 <p x-text="gender"></p>
             </div>
+        </div>
+    </div> -->
+
+    <div x-data="{open: false,
+        get isOpen() {
+            return this.open
+        },
+        set isOpen(open) {
+            this.open = open
+        },
+        toggle(){
+            this.isOpen = !this.isOpen
+        }
+    }">
+        <button @click="toggle">Open/Close</button>
+        <div x-show="open">
+            Content...
         </div>
     </div>
 </body>
