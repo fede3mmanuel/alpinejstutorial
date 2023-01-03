@@ -86,7 +86,7 @@
         </div>
     </div> -->
 
-    <div x-data="{open: false,
+    <!-- <div x-data="{open: false,
         toggle(){
             this.open = !this.open
         }
@@ -98,6 +98,21 @@
         >
             Content...
         </div>
+    </div> -->
+
+    <!-- x-if -->
+
+    <div x-data="{open: false,
+        toggle(){
+            this.open = !this.open
+        }
+    }">
+        <button @click="toggle">Open/Close</button>
+        <template x-if="open">
+            <div>
+                Content...
+            </div>
+        </template>
     </div>
 </body>
 </html>
