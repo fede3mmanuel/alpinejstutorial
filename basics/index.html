@@ -130,5 +130,32 @@
             <p x-text="n"></p>
         </template>
     </div> -->
+
+    <div x-data="{clicked: false}">
+        <button class="bordered" :class="clicked ? 'yellow' : ''" @click="clicked = true">
+            clicked me
+        </button>
+    </div>
+    <div x-data="{clicked: false}">
+        <button class="bordered" :class="{yellow: clicked}" @click="clicked = true">
+            clicked me
+        </button>
+    </div>
+    <style>
+        .bordered {
+            border: 2px solid brown;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+
+    <div x-data="{clicked: false}">
+    <button style="color: green" :style="{backgroundColor: clicked ? 'red' : ''}" @click="clicked = !clicked">
+        clicked me
+    </button>
+
+    <button x-data="{id: ''}" :id="id" @click="id = Math.round(Math.random() * 1000000)">Button</button>
+</div>
 </body>
 </html>
