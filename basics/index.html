@@ -165,7 +165,7 @@
             <button x-text="color" :style="{ color: color}"></button>
         </template>
     </div> -->
-    <div x-data @scroll.window="console.log('scroll')" @edit="console.log('edit was triggered')">
+    <!-- <div x-data @scroll.window="console.log('scroll')" @edit="console.log('edit was triggered')">
         <button @click="console.log('Clicked 1', $event)">Clicked 11</button>
         <input type="text" @keyup.enter="console.log('keyup enter')">
 
@@ -181,6 +181,6 @@
         <input type="text" @keyup.throttle="console.log('throttle')">
 
         <button @click="$dispatch('edit')">Edit</button>
-    </div>
+    </div> -->
 </body>
 </html>
