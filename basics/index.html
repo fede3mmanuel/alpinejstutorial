@@ -165,5 +165,22 @@
             <button x-text="color" :style="{ color: color}"></button>
         </template>
     </div> -->
+    <div x-data @scroll.window="console.log('scroll')" @edit="console.log('edit was triggered')">
+        <button @click="console.log('Clicked 1', $event)">Clicked 11</button>
+        <input type="text" @keyup.enter="console.log('keyup enter')">
+
+        <div x-data="{modal: false}">
+            <button @click="modal = true">Show modal</button>
+            <div x-show="modal" @click.outside="modal = false">
+                Modal Content...
+            </div>
+        </div>
+
+        <input type="text" @keyup.once="console.log('once')">
+        <input type="text" @keyup.debounce="console.log('debounce')">
+        <input type="text" @keyup.throttle="console.log('throttle')">
+
+        <button @click="$dispatch('edit')">Edit</button>
+    </div>
 </body>
 </html>
