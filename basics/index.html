@@ -183,9 +183,24 @@
         <button @click="$dispatch('edit')">Edit</button>
     </div> -->
 
-    <div x-data="{keyword: null}">
+    <!-- <div x-data="{keyword: null}">
         <input type="text" x-model.debounce="keyword" placeholder="Search for items">
         <p x-text="keyword"></p>
+    </div> -->
+
+    <div x-data="{keyword: null}">
+        <input type="text" x-model="keyword">
+        <button x-text="keyword"></button>
+    </div>
+
+    <div x-data="{keyword: null}">
+        <input type="text" x-model="keyword" >
+        <button class="color-button" :style="{ color: keyword}">Color</button>
+    </div>
+
+    <div x-data="{keyword: null}">
+        <input type="text" x-model="keyword">
+        <button x-text="keyword" :id="keyword"></button>
     </div>
 </body>
 </html>
