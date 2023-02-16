@@ -212,5 +212,9 @@
             <p x-text="name"></p>
         </div>
     </div> -->
+    <div x-data>
+        <input x-ref="inputEmail" type="text" placeholder="Email">
+        <button @click="$refs.inputEmail.style.borderColor = 'red'">Check</button>
+    </div>
 </body>
 </html>
